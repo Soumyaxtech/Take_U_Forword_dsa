@@ -38,3 +38,35 @@ using namespace std;
 
 // }
 
+// ARRAY ELEMENTS ARE STORED  IN CONTINUOUS MEMORY LOCATION 
+
+// int main(){
+//     //2D array
+//     int arr[3][5];
+//     arr[1][3]=78;
+//     cout<<arr[1][3]<<endl;  // o/p 78
+//     cout<<arr[2][3];        // gives garbage value as we dont assigned it
+    
+
+// }
+
+
+// int main(){
+
+//     string name = "Soumyajit";
+//     int len = name.size();
+//     cout<<name[3]<<endl;
+//     cout<<name[0]<<endl;
+//     cout<<name[len-1]<<endl;
+// }
+
+// FUNCTIONS IN DSA ..................................
+
+
+void printName(){
+        cout<<"Hey!Soumyajit";
+    }
+int main(){
+    printName();
+    return 0;
+}
