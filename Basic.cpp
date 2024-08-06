@@ -63,10 +63,50 @@ using namespace std;
 // FUNCTIONS IN DSA ..................................
 
 
-void printName(){
-        cout<<"Hey!Soumyajit";
-    }
-int main(){
-    printName();
-    return 0;
+// void printName(){
+//         cout<<"Hey!Soumyajit";
+//     }
+// int main(){
+//     printName();
+//     return 0;
+// }
+
+//      PASS BY VALUE IN FUNCTION .....................
+
+
+// void addFive(int n){
+
+//     cout<<n<<endl;
+//     n=n+5;
+//     cout<<n<<endl;
+//     n=n+5;
+//     cout<<n<<endl;
+// }
+// int main(){
+
+//     int n=10;   // 1st 87 no line execution start --> 88(call the function)
+//     addFive(n); // then 79(print 10)-->81(print 15)-->83(print 20)
+//     cout<<n;    // then 89 (but print 10 insted of 20 ) as original value won't pass
+//     return 0;   // here a copy of the number pass so original n remain same (10) 
+// }               // this is called pass by value
+
+
+// PASS BY REFERENCE IN FUNCTION ...................................
+
+
+void addFive(int &n){   // (&) IT TAKES THE ADDRESS OF ORIGINAL n 
+                        // so value changes ans 10,15,20,20
+    cout<<n<<endl;
+    n=n+5;
+    cout<<n<<endl;
+    n=n+5;
+    cout<<n<<endl;
 }
+int main(){
+
+    int n=10;
+    addFive(n);
+    cout<<n;
+}   
+
+
