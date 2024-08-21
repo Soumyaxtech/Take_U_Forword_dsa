@@ -94,19 +94,36 @@ using namespace std;
 // PASS BY REFERENCE IN FUNCTION ...................................
 
 
-void addFive(int &n){   // (&) IT TAKES THE ADDRESS OF ORIGINAL n 
-                        // so value changes ans 10,15,20,20
-    cout<<n<<endl;
-    n=n+5;
-    cout<<n<<endl;
-    n=n+5;
-    cout<<n<<endl;
+// void addFive(int &n){   // (&) IT TAKES THE ADDRESS OF ORIGINAL n 
+//                         // so value changes ans 10,15,20,20
+//     cout<<n<<endl;
+//     n=n+5;
+//     cout<<n<<endl;
+//     n=n+5;
+//     cout<<n<<endl;
+// }
+// int main(){
+
+//     int n=10;
+//     addFive(n);
+//     cout<<n;
+// }   
+
+void addFive(int arr[],int n){
+    arr[0]+=5;                         // ARRAY IS ALWAYS PASS BY REFERENCE
+    cout<<"value in function "<<arr[0]<<endl;  
 }
 int main(){
-
-    int n=10;
-    addFive(n);
-    cout<<n;
-}   
+    int n;
+    cout<<"enter the size ";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>> arr[i];
+    }
+    cout<<"value in main before "<<arr[0]<<endl;
+    addFive(arr,n);
+    cout<<"value in main after"<<arr[0];
+}
 
 
