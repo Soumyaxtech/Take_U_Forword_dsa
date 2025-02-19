@@ -45,7 +45,9 @@ using namespace std;
 //     int arr[3][5];
 //     arr[1][3]=78;
 //     cout<<arr[1][3]<<endl;  // o/p 78
-//     cout<<arr[2][3];        // gives garbage value as we dont assigned it
+//     arr[2][4]=10;
+//     cout<<arr[2][3]<<endl;        // gives garbage value as we dont assigned it
+//     cout<<arr[2][4]<<endl;  // o/p is 10
     
 
 // }
@@ -55,6 +57,7 @@ using namespace std;
 
 //     string name = "Soumyajit";
 //     int len = name.size();
+//     cout<<len<<endl;
 //     cout<<name[3]<<endl;
 //     cout<<name[0]<<endl;
 //     cout<<name[len-1]<<endl;
@@ -123,7 +126,7 @@ int main(){
     }
     cout<<"value in main before "<<arr[0]<<endl;
     addFive(arr,n);
-    cout<<"value in main after"<<arr[0];
+    cout<<"value in main after "<<arr[0];
 }
 
 
